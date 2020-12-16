@@ -1,0 +1,32 @@
+<app-table></app-table>
+
+
+<div class="card card-small" tabindex="0">
+  <form class="mt-3" [formGroup]="estudentForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill" class="text-warning bg-dark">
+      <mat-label>Name:</mat-label>
+      <input formControlName="name" matInput required class="example-right-align">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="text-warning bg-dark">
+      <mat-label>Patronus:</mat-label>
+      <input formControlName="patronus" matInput required class="example-right-align">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="text-warning bg-dark">
+      <mat-label>Age:</mat-label>
+      <input formControlName="age" matInput type="number" required class="example-right-align">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="text-warning bg-dark">
+      <mat-label>Image:</mat-label>
+      <input formControlName="image" matInput required class="example-right-align">
+    </mat-form-field>
+
+
+    <button mat-fab color="secondary" aria-label="Add button with a save icon" type="submit" [disabled]="!estudentForm.valid">
+      <mat-icon>save</mat-icon>
+    </button>
+
+  </form>
+</div>

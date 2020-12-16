@@ -1,0 +1,12 @@
+<div class="card card-small" tabindex="0">
+  <mat-form-field appearance="fill" class="text-warning bg-dark">
+    <mat-label >Seleccione casa de Hogwarts</mat-label>
+    <mat-select panelClass="text-light bg-dark" [(value)]="selected">
+      <mat-option *ngFor="let casa of casas" [value]="casa" class="text-light bg-dark">
+        {{casa}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<app-table></app-table>
